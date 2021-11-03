@@ -59,6 +59,12 @@ The Action will be going with the one-liner version above of course, so let's se
 generate a new private key for deployments using ```ssh-keygen -t rsa -b 4096 -q -N "" -f ~/.ssh/id_rsa_deploy``` and
 add `~/.ssh/id_rsa_deploy.pub` contents to `/home/joe/.ssh/authorized_keys`.
 
+> **Important!** For the action to work the server must have _direct_ pull access to the github repository. We may
+> sometimes be able to pull changes over SSH because our keys are being forwarded without the server being able to pull.
+> A deploy key must exist and the account pulling the changes should be configured accordingly. Refer to
+> [managing deploy keys](https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys) on GitHub Docs
+> for more information.
+
 ### Setting up the secrets
 
 We will need all of the deployment information to be hidden into secrets for security of course:

@@ -5,6 +5,8 @@ date:   2021-11-03 16:29:44 +0200
 categories: jekyll update
 ---
 
+Welcome!
+
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
